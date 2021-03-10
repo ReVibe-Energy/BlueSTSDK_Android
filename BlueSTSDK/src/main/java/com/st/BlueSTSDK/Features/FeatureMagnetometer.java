@@ -38,11 +38,11 @@ import com.st.BlueSTSDK.Utils.NumberConversion;
  */
 public class FeatureMagnetometer extends Feature {
 
-    public static final String FEATURE_NAME = "Magnetometer";
-    public static final String FEATURE_UNIT = "mGa";
+    public static final String FEATURE_NAME = "Dominating vibration frequency";
+    public static final String FEATURE_UNIT = "Hz";
     public static final String[] FEATURE_DATA_NAME = {"X", "Y", "Z"};
-    public static final short DATA_MAX = 2000;
-    public static final short DATA_MIN = -2000;
+    public static final short DATA_MAX = 200;
+    public static final short DATA_MIN = 0;
 
     /**
      * index where you can find magnetometer value/description in the x direction

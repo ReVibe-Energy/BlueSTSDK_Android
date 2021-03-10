@@ -39,10 +39,10 @@ import com.st.BlueSTSDK.Utils.NumberConversion;
  */
 public class FeatureHumidity extends Feature {
 
-    public static final String FEATURE_NAME = "Humidity";
+    public static final String FEATURE_NAME = "Dominating frequency";
 
-    public static final String FEATURE_UNIT = "%";
-    public static final String FEATURE_DATA_NAME = "Humidity";
+    public static final String FEATURE_UNIT = "Hz";
+    public static final String FEATURE_DATA_NAME = "Dominating frequency";
     public static final float DATA_MAX = 100;
     public static final float DATA_MIN = 0;
 

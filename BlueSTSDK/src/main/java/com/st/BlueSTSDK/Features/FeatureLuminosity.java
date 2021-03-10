@@ -42,9 +42,9 @@ import com.st.BlueSTSDK.Utils.NumberConversion;
  */
 public class FeatureLuminosity extends Feature {
 
-    public static final String FEATURE_NAME = "Luminosity";
-    public static final String FEATURE_UNIT = "Lux";
-    public static final String FEATURE_DATA_NAME = "Luminosity";
+    public static final String FEATURE_NAME = "Harvester power";
+    public static final String FEATURE_UNIT = "mW";
+    public static final String FEATURE_DATA_NAME = "Harvester power";
     public static final short DATA_MAX = 1000;
     public static final short DATA_MIN = 0;
 
