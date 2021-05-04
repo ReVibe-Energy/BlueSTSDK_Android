@@ -47,7 +47,7 @@ public class FeatureAcceleration extends Feature {
     /**
      * data units
      */
-    public static final String FEATURE_UNIT = "mg";
+    public static final String FEATURE_UNIT = "g";
     /**
      * name of the data
      */
@@ -95,7 +95,7 @@ public class FeatureAcceleration extends Feature {
         if(s!=null)
             if (s.data.length > ACC_X_INDEX)
                 if (s.data[ACC_X_INDEX] != null)
-                    return s.data[ACC_X_INDEX].floatValue();
+                    return s.data[ACC_X_INDEX].floatValue()/1000; //divide by 1000 to convert mg -> g
         //else
         return Float.NaN;
     }//getAccX
@@ -110,7 +110,7 @@ public class FeatureAcceleration extends Feature {
         if(s!=null)
             if (s.data.length > ACC_Y_INDEX)
                 if (s.data[ACC_Y_INDEX] != null)
-                    return s.data[ACC_Y_INDEX].floatValue();
+                    return s.data[ACC_Y_INDEX].floatValue()/1000; //divide by 1000 to convert mg -> g
         //else
         return Float.NaN;
     }//getAccY
@@ -125,7 +125,7 @@ public class FeatureAcceleration extends Feature {
         if(s!=null)
             if (s.data.length > ACC_Z_INDEX)
                 if (s.data[ACC_Z_INDEX] != null)
-                    return s.data[ACC_Z_INDEX].floatValue();
+                    return s.data[ACC_Z_INDEX].floatValue()/1000; //divide by 1000 to convert mg -> g
         //else
         return Float.NaN;
     }//getAccZ

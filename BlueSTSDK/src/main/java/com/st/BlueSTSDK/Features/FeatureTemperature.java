@@ -79,7 +79,7 @@ public class FeatureTemperature extends Feature {
         if(sample!=null)
             if(sample.data.length>0)
                 if (sample.data[0] != null)
-                    return sample.data[0].floatValue();
+                    return sample.data[0].floatValue()/10; // divide by 10 because device sends deci-degree
         //else
         return Float.NaN;
     }

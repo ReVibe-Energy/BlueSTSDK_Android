@@ -30,6 +30,8 @@ import com.st.BlueSTSDK.Feature;
 import com.st.BlueSTSDK.Node;
 import com.st.BlueSTSDK.Utils.NumberConversion;
 
+import static java.lang.Math.abs;
+
 /**
  * Feature used for contains the data from an magnetometer sensor. The data are in mg
  *
@@ -68,7 +70,9 @@ public class FeatureMagnetometer extends Feature {
             if(s.data!=null)
                 if (s.data.length > MAG_X_INDEX)
                     if (s.data[MAG_X_INDEX] != null)
-                        return s.data[MAG_X_INDEX].floatValue();
+                        // divide by 1k because device sends frequency in bins, we want Hz
+                        // and do abs() because the device sends also negative values for some reason
+                        return abs(s.data[MAG_X_INDEX].floatValue()/1000);
         //else
         return Float.NaN;
     }//getMagX
@@ -84,7 +88,7 @@ public class FeatureMagnetometer extends Feature {
             if(s.data!=null)
                 if (s.data.length > MAG_Y_INDEX)
                     if (s.data[MAG_Y_INDEX] != null)
-                        return s.data[MAG_Y_INDEX].floatValue();
+                        return abs(s.data[MAG_Y_INDEX].floatValue()/1000); // divide by 1k because device sends frequency in bins, we want Hz
         //else
         return Float.NaN;
     }//getMagY
@@ -100,7 +104,7 @@ public class FeatureMagnetometer extends Feature {
             if(s.data!=null)
                 if (s.data.length > MAG_Z_INDEX)
                     if (s.data[MAG_Z_INDEX] != null)
-                        return s.data[MAG_Z_INDEX].floatValue();
+                        return abs(s.data[MAG_Z_INDEX].floatValue()/1000); // divide by 1k because device sends frequency in bins, we want Hz
         //else
         return Float.NaN;
     }//getMagZ

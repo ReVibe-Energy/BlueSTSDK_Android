@@ -67,12 +67,12 @@ public class FeatureLuminosity extends Feature {
      * @param s feature raw data
      * @return luminosity value or -1 if the data array is not valid
      */
-    public static int getLuminosity(Sample s) {
+    public static float getLuminosity(Sample s) {
         if(s!=null)
             if(s.data!=null)
                 if(s.data.length>0)
                     if (s.data[0] != null)
-                        return s.data[0].intValue();
+                        return s.data[0].floatValue()/1000;
         //else
         return -1; // the luminosity is always positive
     }
