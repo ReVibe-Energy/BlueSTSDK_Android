@@ -55,11 +55,11 @@ public class FeatureAcceleration extends Feature {
     /**
      * max acceleration handle by the sensor
      */
-    public static final short DATA_MAX = 2000;
+    public static final short DATA_MAX = 3;
     /**
      * min acceleration handle by the sensor
      */
-    public static final short DATA_MIN = -2000;
+    public static final short DATA_MIN = 0;
 
     /** index where you can find acceleration value/description in the x direction */
     private static final int ACC_X_INDEX = 0;

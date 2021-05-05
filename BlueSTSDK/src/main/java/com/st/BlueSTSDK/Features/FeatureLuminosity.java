@@ -45,7 +45,7 @@ public class FeatureLuminosity extends Feature {
     public static final String FEATURE_NAME = "Harvester power";
     public static final String FEATURE_UNIT = "mW";
     public static final String FEATURE_DATA_NAME = "Harvester power";
-    public static final short DATA_MAX = 1000;
+    public static final short DATA_MAX = 100;
     public static final short DATA_MIN = 0;
 
     /**
